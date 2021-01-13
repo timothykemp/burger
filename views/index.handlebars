@@ -1,31 +1,46 @@
-<div>
-    <img class="burger-image" src="./img/hamburger-image.png" alt="Burger Image by Jan Balog from Pixabay">
-</div>
+<section class="section">
+    <div class="container has-text-centered">
+        <figure class="image">
+            <img class="burger-image" src="./img/hamburger-image.png" alt="Burger Image by Jan Balog from Pixabay">
+        </figure>
+        <h1 class="title is-1">Eat Da Burger!</h1>
+    </div>
+</section>
 
 <section class="section">
     <div class="container">
-        <h1 class="title is-1">Eat Da Burger!</h1>
+        <div class="columns is-centered">
 
-        <h2 class="title">Burgers that are not devoured!</h2>
+            <div class="column is-two-fifths is-offset-one">
+                <h2 class="title has-text-centered">Burgers to be eaten!</h2>
 
-        <ul>
-            {{#each burgers}}
-            {{#unless devoured}}
-            {{> burgers/burger-block devoured=false}}
-            {{/unless}}
-            {{/each}}
-        </ul>
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-block devoured=false}}
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
 
-        <h2>Burgers that are devoured!</h2>
+            <div class="column is-two-fifths">
+                <h2 class="title has-text-centered">Devoured burgers!</h2>
 
-        <ul>
-            {{#each burgers}}
-            {{#if devoured}}
-            {{> burgers/burger-block devoured=true}}
-            {{/if}}
-            {{/each}}
-        </ul>
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
 
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
         <h2>Add a Burger</h2>
         <form class="create-form">
 
@@ -34,7 +49,7 @@
                 <input type="text" id="ca" name="name">
             </div>
 
-            <button class="button" type="submit">Add Burger</button>
+            <button class="button is-primary" type="submit">Add Burger</button>
 
             <p class="subtitle">Enter the name of a burger you would like. Click "Submit" to save it.</p>
         </form>
