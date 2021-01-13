@@ -1,4 +1,18 @@
-ul li {
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+     /* FF3.6-15 */
+    background: -moz-linear-gradient(top,  #fef8ea 1%, #efc434 100%);
+     /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-linear-gradient(top,  #fef8ea 1%,#efc434 100%);
+     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(to bottom,  #fef8ea 1%,#efc434 100%);
+}
+
+li {
     padding: .5rem;
 }
 
@@ -11,6 +25,10 @@ ul li {
     max-width: 260px;
 }
 
+.burger-list {
+    margin: 1.5rem;
+}
+
 .section {
-    padding: 1rem 2rem;
+    padding: .75rem 2rem;
 }
