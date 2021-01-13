@@ -1,9 +1,17 @@
-<li>
+<div class="container burger-container">
 
-	{{burger_name}}
+	{{!-- <li> --}}
 
-	{{#unless devoured}}
-	<button class="devour-burger" data-id="{{this.id}}">Devour it!</button>
-	{{/unless}}
+		{{burger_name}}
 
-</li>
+		{{#unless devoured}}
+
+		<button class="button devour-burger is-pulled-right is-small is-warning is-rounded" data-id="{{this.id}}">Devour
+			it!</button>
+
+		{{/unless}}
+
+		{{!--
+	</li> --}}
+
+</div>
