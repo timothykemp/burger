@@ -6,6 +6,7 @@ body {
     background: -webkit-linear-gradient(top,  #fef8ea 1%,#efc434 100%);
      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     background: linear-gradient(to bottom,  #fef8ea 1%,#efc434 100%);
+    line-height: 1.25;
 }
 
 html {
@@ -18,7 +19,7 @@ li {
 
 .button.is-warning.is-hovered, 
 .button.is-warning:hover {
-    background-color: #ffc94a;
+    background-color: #fef8ea;
 }
 
 .burger-container {
@@ -28,6 +29,21 @@ li {
     border-radius: 4px;
     padding: .25rem;
     margin: .25rem;
+    background-color: #ffc94a;
+    color: rgba(34, 32, 32, 0.877);
+    font-weight: bold;
+}
+
+.burger-container-devoured {
+    border: rgb(87, 87, 86);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    padding: .25rem;
+    margin: .25rem;
+    background-color: #a8a8a8;
+    color: rgb(87, 87, 86);
+    font-weight: bold;
 }
 
 .burger-image {
@@ -42,6 +58,9 @@ li {
 .burger-list {
     border-radius: 25px;
     margin: 1.5rem;
+    border: rgb(255, 187, 59);
+    border-style: solid;
+    border-width: 4px;
 }
 
 .devour-burger {

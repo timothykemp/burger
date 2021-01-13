@@ -1,6 +1,8 @@
-<div class="container burger-container">
-
-	{{!-- <li> --}}
+{{#if devoured}}
+<div class="container burger-container-devoured">
+	{{else}}
+	<div class="container burger-container">
+		{{/if}}
 
 		{{burger_name}}
 
@@ -11,7 +13,4 @@
 
 		{{/unless}}
 
-		{{!--
-	</li> --}}
-
-</div>
+	</div>
