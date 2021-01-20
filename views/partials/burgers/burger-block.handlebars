@@ -1,16 +1,18 @@
+{{!-- Format burger accordingly based on if it has been devoured or not --}}
 {{#if devoured}}
-<div class="container burger-container-devoured">
-	{{else}}
+	<div class="container burger-container-devoured">
+{{else}}
 	<div class="container burger-container">
-		{{/if}}
+{{/if}}
 
-		{{burger_name}}
+{{burger_name}}
 
-		{{#unless devoured}}
+{{#unless devoured}}
 
-		<button class="button devour-burger is-pulled-right is-small is-warning is-rounded" data-id="{{this.id}}">Devour
-			it!</button>
+	{{!-- Devour it! button to move burger to right-side --}}
+	<button class="button devour-burger is-pulled-right is-small is-warning is-rounded" data-id="{{this.id}}">Devour
+		it!</button>
 
-		{{/unless}}
+{{/unless}}
 
-	</div>
+</div>

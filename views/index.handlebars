@@ -16,9 +16,9 @@
 
                 <ul>
                     {{#each burgers}}
-                    {{#unless devoured}}
-                    {{> burgers/burger-block devoured=false}}
-                    {{/unless}}
+                        {{#unless devoured}}
+                            {{> burgers/burger-block devoured=false}}
+                        {{/unless}}
                     {{/each}}
                 </ul>
             </div>
@@ -28,9 +28,9 @@
 
                 <ul>
                     {{#each burgers}}
-                    {{#if devoured}}
-                    {{> burgers/burger-block devoured=true}}
-                    {{/if}}
+                        {{#if devoured}}
+                            {{> burgers/burger-block devoured=true}}
+                        {{/if}}
                     {{/each}}
                 </ul>
             </div>
@@ -41,17 +41,27 @@
 
 <section class="section">
     <div class="container">
-        <h2>Add a Burger</h2>
-        <form class="create-form">
+        <div class="columns is-centered">
+            <div class="column is-4 box burger-list">
 
-            <div class="form-group">
-                <label for="ca">Burger Name:</label>
-                <input type="text" id="ca" name="name">
+                <form class="create-form">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input class="input burger-field" type="text" id="ca" name="name" placeholder="Burger Name"
+                                required>
+                        </div>
+
+                        <div class="control">
+                            <button class="button add-burger" type="submit">Add Burger</button>
+                        </div>
+                    </div>
+
+                    <p class="has-text-centered">Enter the name of a burger you would like. Click
+                        <strong>"Add Burger"</strong> to save it.
+                    </p>
+                </form>
+
             </div>
-
-            <button class="button is-primary" type="submit">Add Burger</button>
-
-            <p>Enter the name of a burger you would like. Click "Submit" to save it.</p>
-        </form>
+        </div>
     </div>
 </section>
