@@ -40,9 +40,10 @@ li {
     color: rgba(34, 32, 32, 0.877);
 }
 
-.add-burger:hover {
+.add-burger:hover,
+.add-burger:focus,
+.add-burger:active {
     background-color: rgb(223, 109, 34);
-    border: rgb(255, 187, 59);
     color: #fff;
 }
 
