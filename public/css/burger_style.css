@@ -1,3 +1,4 @@
+/* HTML & Generic Class Tags */
 body {
     min-height: 100%;
      /* FF3.6-15 */
@@ -17,34 +18,26 @@ li {
     padding: .25rem;
 }
 
+.section {
+    padding: .75rem 2rem;
+}
+
+
+/* Header Image */
+.burger-image {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    max-width: 260px;
+}
+
+
+/* Burger Containers - To Be Eaten & Devoured */
 .button.is-warning.is-hovered, 
 .button.is-warning:hover {
     background-color: #fef8ea;
-}
-
-.burger-field,
-.burger-field:active,
-.burger-field:focus {
-    border-color: rgb(255, 187, 59);
-    box-shadow: inset 0 0.0625em 0.125em #ffc94a;
-}
-
-.burger-field:hover {
-    border-color: rgb(223, 109, 34);
-    box-shadow: inset 0 0.0625em 0.125em rgb(223, 109, 34);
-}
-
-.add-burger {
-    background-color: #ffc94a;
-    border: rgb(255, 187, 59);
-    color: rgba(34, 32, 32, 0.877);
-}
-
-.add-burger:hover,
-.add-burger:focus,
-.add-burger:active {
-    background-color: rgb(223, 109, 34);
-    color: #fff;
 }
 
 .burger-container {
@@ -71,15 +64,6 @@ li {
     font-weight: bold;
 }
 
-.burger-image {
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    max-width: 260px;
-}
-
 .burger-list {
     border-radius: 25px;
     margin: 1.5rem;
@@ -94,6 +78,42 @@ li {
     font-weight: 700;
 }
 
-.section {
-    padding: .75rem 2rem;
+
+/* Add Burger Container */
+.add-burger {
+    background-color: #ffc94a;
+    border: rgb(255, 187, 59);
+    color: rgba(34, 32, 32, 0.877);
 }
+
+.add-burger:hover,
+.add-burger:focus,
+.add-burger:active {
+    background-color: rgb(223, 109, 34);
+    color: #fff;
+}
+
+.burger-field,
+.burger-field:active,
+.burger-field:focus {
+    border-color: rgb(255, 187, 59);
+    box-shadow: inset 0 0.0625em 0.125em #ffc94a;
+}
+
+.burger-field:hover {
+    border-color: rgb(223, 109, 34);
+    box-shadow: inset 0 0.0625em 0.125em rgb(223, 109, 34);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

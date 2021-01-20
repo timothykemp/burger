@@ -1,67 +1,76 @@
-<section class="section">
-    <div class="container has-text-centered">
-        <figure class="image">
-            <img class="burger-image" src="./img/hamburger-image.png" alt="Burger Image by Jan Balog from Pixabay">
-        </figure>
-        <h1 class="title is-1">Eat Da Burger!</h1>
-    </div>
-</section>
+<main>
 
-<section class="section">
-    <div class="container">
-        <div class="columns is-centered">
+    {{!-- Header section with burger image and title --}}
+    <section class="section">
+        <div class="container has-text-centered">
 
-            <div class="column is-4 box burger-list">
-                <h2 class="title has-text-centered">Burgers to be eaten!</h2>
-
-                <ul>
-                    {{#each burgers}}
-                        {{#unless devoured}}
-                            {{> burgers/burger-block devoured=false}}
-                        {{/unless}}
-                    {{/each}}
-                </ul>
-            </div>
-
-            <div class="column is-4 box burger-list">
-                <h2 class="title has-text-centered">Devoured burgers!</h2>
-
-                <ul>
-                    {{#each burgers}}
-                        {{#if devoured}}
-                            {{> burgers/burger-block devoured=true}}
-                        {{/if}}
-                    {{/each}}
-                </ul>
-            </div>
+            <figure class="image">
+                <img class="burger-image" src="./img/hamburger-image.png" alt="Burger Image by Jan Balog from Pixabay">
+            </figure>
+            <h1 class="title is-1">Eat Da Burger!</h1>
 
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section">
-    <div class="container">
-        <div class="columns is-centered">
-            <div class="column is-4 box burger-list">
+    {{!-- Burgers to be eaten & devoured burgers containers --}}
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
 
-                <form class="create-form">
-                    <div class="field has-addons">
-                        <div class="control is-expanded">
-                            <input class="input burger-field" type="text" id="ca" name="name" placeholder="Burger Name"
-                                required>
-                        </div>
+                <div class="column is-4 box burger-list">
+                    <h2 class="title has-text-centered">Burgers to be eaten!</h2>
+                    <ul>
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                                {{> burgers/burger-block devoured=false}}
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
 
-                        <div class="control">
-                            <button class="button add-burger" type="submit">Add Burger</button>
-                        </div>
-                    </div>
-
-                    <p class="has-text-centered">Enter the name of a burger you would like. Click
-                        <strong>"Add Burger"</strong> to save it.
-                    </p>
-                </form>
+                <div class="column is-4 box burger-list">
+                    <h2 class="title has-text-centered">Devoured burgers!</h2>
+                    <ul>
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                {{> burgers/burger-block devoured=true}}
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
 
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    {{!-- Container to add a new burger using form input field --}}
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-4 box burger-list">
+
+                    <form class="create-form">
+
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <input class="input burger-field" type="text" id="ca" name="name"
+                                    placeholder="Burger Name" required>
+                            </div>
+
+                            <div class="control">
+                                <button class="button add-burger" type="submit">Add Burger</button>
+                            </div>
+                        </div>
+
+                        <p class="has-text-centered">Enter the name of a burger you would like. Click
+                            <strong>"Add Burger"</strong> to save it.
+                        </p>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
